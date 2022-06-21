@@ -15,7 +15,7 @@ const BouncingArrow = () => {
           d="M-11578.836,3576.481c10.736,10.655,28.885,25.267,28.885,25.267l28.826-25.267"
           transform="translate(11584.492 -3570.824)"
           fill="none"
-          stroke="#603601"
+          stroke="#ffeead"
           stroke-linecap="round"
           stroke-width="8"
         />
