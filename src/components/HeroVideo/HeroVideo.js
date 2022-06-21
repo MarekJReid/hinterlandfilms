@@ -1,11 +1,14 @@
-import React from 'react'
-import { Video } from './HeroVideo.css'
+import React from "react"
+import BouncingArrow from "../Bouncing Arrow/BouncingArrow"
+import { Video, VideoWrapper } from "./HeroVideo.css"
 
-const HeroVideo = ({heroMedia}) => {
+const HeroVideo = ({ heroMedia }) => {
   return (
-    <Video autoPlay loop id="myVideo">
-    <source  src={heroMedia.file.url} type="video/mp4"/>
-  </Video>
+    <VideoWrapper>
+      <Video autoPlay loop id="myVideo">
+        <source src={heroMedia.file.url} type="video/mp4" />
+      </Video>
+    </VideoWrapper>
   )
 }
 

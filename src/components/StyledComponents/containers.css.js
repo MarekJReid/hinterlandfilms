@@ -28,7 +28,7 @@ display: flex;
 flex-direction: column;
 // overflow: hidden;
 height: 100vh;
-justify-content: center;
+// justify-content: center;
 align-self: center;
 `
 
