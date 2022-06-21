@@ -26,7 +26,7 @@ width: 100%;
 height: auto;
 display: flex;
 flex-direction: column;
-overflow: hidden;
+// overflow: hidden;
 height: 100vh;
 justify-content: center;
 align-self: center;

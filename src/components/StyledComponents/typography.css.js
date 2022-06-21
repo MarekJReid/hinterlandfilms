@@ -7,9 +7,9 @@ import Medium from "../../assetts/fonts/fonts/CentraNo2-Medium.woff"
 
 export const Typography = createGlobalStyle`
 :root{
-  --color-text: white;
+  --color-text: black;
   --color-background: white;
-  --color-primary: white;
+  --color-primary: black;
 
   --font-size-small: 1rem;
   --font-size-medium: 1.25rem;
