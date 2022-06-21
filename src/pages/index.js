@@ -8,15 +8,16 @@ import {
   Heading1,
   Heading2,
 } from "../components/StyledComponents/typography.css"
-import { MiddleContainer } from "../components/StyledComponents/containers.css"
+import { MiddleContainer, SectionWrapper } from "../components/StyledComponents/containers.css"
 import { Video } from "gatsby-video"
 
 import GithubIcon from "../images/githubIcon"
 import HeroVideo from "../components/HeroVideo/HeroVideo"
 import HeroSeeMore from "../components/HeroSeeMore/HeroSeeMore"
+import ContactSection from "../components/ContactSection/ContactSection"
 
 const IndexPage = ({ data }) => {
-  const { heading, heroMedia, introduction } =
+  const { heading, heroMedia, introduction, profilePhoto, contactText } =
     data.allContentfulLandingPageContent.edges[0].node
   console.log("data", data)
   return (
@@ -24,8 +25,10 @@ const IndexPage = ({ data }) => {
       <Seo title="Home" />
     
       <HeroVideo heroMedia={heroMedia} />
+     hi hi
       <HeroSeeMore heading={heading} heroMedia={heroMedia} introduction={introduction}/>
-    </Layout>
+      <ContactSection profilePhoto={profilePhoto} contactText={contactText}/>
+      </Layout>
   )
 }
 
@@ -45,6 +48,13 @@ export const query = graphql`
             file {
               url
             }
+          }
+          contactText {
+            raw
+          }
+          profilePhoto{
+            title
+            gatsbyImageData(placeholder: BLURRED, layout: FULL_WIDTH)
           }
         }
       }

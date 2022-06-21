@@ -54,7 +54,7 @@ export const Heading1 = styled.h1`
       case "xs":
         return ".25rem"
       default:
-        return "var( --color-light-blue)"
+        return "var( --color-light-brown)"
     }
   }};
   font-size: 2rem;

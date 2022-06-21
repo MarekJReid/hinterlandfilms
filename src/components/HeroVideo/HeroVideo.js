@@ -4,11 +4,11 @@ import { Video, VideoWrapper } from "./HeroVideo.css"
 
 const HeroVideo = ({ heroMedia }) => {
   return (
-    <VideoWrapper>
-      <Video autoPlay loop id="myVideo">
+
+      <Video autoPlay loop >
         <source src={heroMedia.file.url} type="video/mp4" />
       </Video>
-    </VideoWrapper>
+
   )
 }
 

@@ -34,7 +34,8 @@ export const HeroIntro = styled.div`
     width: 100%;
 display: flex;
 justify-content: center;
-   margin-top: -20rem;
+   position: absolute;
+   bottom: 5vh;
    z-index: 1000;
  
 `;

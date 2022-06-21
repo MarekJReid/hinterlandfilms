@@ -23,11 +23,11 @@ flex-direction: column;
 
 export const PageWrapper = styled.div`
 width: 100%;
-height: auto;
+
 display: flex;
 flex-direction: column;
-// overflow: hidden;
-height: 100vh;
+
+
 // justify-content: center;
 align-self: center;
 `
@@ -39,7 +39,7 @@ justify-content: center;
 align-items: center;
 position: absolute;
 align-items: center;
-overflow: hidden;
+
 width: 100%;
 flex-direction: column;
 
@@ -52,10 +52,10 @@ flex-direction: column;
 export const SectionContainer = styled.div`
 display: flex;
 justify-content: flex-end;
-flex-direction: column;
+flex-direction: ${ props => props.fd ? props.fd : 'column'};
 
 width: ${ props => props.width ? props.width : '100%'};
-padding: ${props => props.overflow === "true" ? '0 3.55rem' : props.full ? '0 3.75rem  0 2.35rem ' : '0 4rem 0 3.5rem'};
+// padding: ${props => props.overflow === "true" ? '0 3.55rem' : props.full ? '0 3.75rem  0 2.35rem ' : '0 4rem 0 3.5rem'};
 background: ${props => props.background ? props.background : ''};
 
 margin-bottom: ${props => {
@@ -94,7 +94,7 @@ margin-bottom: ${props => {
           return "0"
       }
     }};
-overflow: hidden;
+
 @media (max-width: 450px) {
     width: 100%;
     padding: 0 1rem;
@@ -143,6 +143,11 @@ margin-bottom: ${props => {
     margin-top: 0;
 }
 `
+export const SplitScreenContainer = styled.div`
+  width: 50vw;
+  height: 100%;
+ 
+`;
 
 export const MenuContainer = styled.div`
 -webkit-flex-direction: column;
