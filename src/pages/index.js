@@ -30,7 +30,7 @@ const IndexPage = ({ data }) => {
           <GithubIcon height="100" width="100" />
         </a>
 
-    <Heading2 marginTop="lg"> Alternativey you can go to <Link to="blogs" style={{ color: `lightgrey`}}> blogs</Link> page to see Contentful and Gatsby in action</Heading2>
+    <Heading2 marginTop="lg"> Alternativey you can go to boob<Link to="blogs" style={{ color: `lightgrey`}}> blogs</Link> page to see Contentful and Gatsby in action</Heading2>
       </MiddleContainer>
 
     </Layout>
