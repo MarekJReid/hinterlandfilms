@@ -1,7 +1,7 @@
 import React from 'react'
-import styled from 'styled-components';
 import BouncingArrow from '../Bouncing Arrow/BouncingArrow'
 import Renderer from '../rich-text-renderers/sample'
+import { HeroContainer, HeroIntro } from '../StyledComponents/containers.css';
 import { Heading1, Heading2 } from '../StyledComponents/typography.css.js'
 
 const HeroSeeMore = ({introduction, heading}) => {
@@ -20,22 +20,3 @@ const HeroSeeMore = ({introduction, heading}) => {
 
 export default HeroSeeMore
 
-export const HeroContainer = styled.div`
-  width: 80%;
- 
- display: flex;
- align-items: center;
- flex-direction: column;
-
-  `;
-
-export const HeroIntro = styled.div`
-
-    width: 100%;
-display: flex;
-justify-content: center;
-   position: absolute;
-   bottom: 5vh;
-   z-index: 1000;
- 
-`;

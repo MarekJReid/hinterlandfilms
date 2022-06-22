@@ -143,6 +143,25 @@ margin-bottom: ${props => {
     margin-top: 0;
 }
 `
+export const HeroContainer = styled.div`
+  width: 80%;
+ 
+ display: flex;
+ align-items: center;
+ flex-direction: column;
+
+  `;
+
+export const HeroIntro = styled.div`
+
+    width: 100%;
+display: flex;
+justify-content: center;
+   position: absolute;
+   bottom: 5vh;
+   z-index: 1000;
+ 
+`;
 export const SplitScreenContainer = styled.div`
   width: 50vw;
   height: 100%;
