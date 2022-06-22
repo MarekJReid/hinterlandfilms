@@ -148,6 +148,15 @@ export const SplitScreenContainer = styled.div`
   height: 100%;
  
 `;
+export const ContactInfoContainer = styled.div`
+  width: 100%;
+  height: 100%;
+  padding: 4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+`;
 
 export const MenuContainer = styled.div`
 -webkit-flex-direction: column;
