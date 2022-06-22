@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-
+import {  animated } from 'react-spring'
 import { marginBottom } from './variables'
 
 export const PageContainer = styled.div`
@@ -167,7 +167,7 @@ export const SplitScreenContainer = styled.div`
   height: 100%;
  
 `;
-export const ContactInfoContainer = styled.div`
+export const ContactInfoContainer = styled(animated.div)`
   width: 100%;
   height: 100%;
   padding: 4rem;

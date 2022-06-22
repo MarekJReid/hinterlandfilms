@@ -1,8 +1,18 @@
 import React from "react"
 import styled, { keyframes } from "styled-components"
-const BouncingArrow = () => {
+const BouncingArrow = ({scrollToPos}) => {
+
+  const scrollToSection = () => {
+    
+    window.scrollTo({
+      top: scrollToPos * 2,
+      behavior: "smooth",
+    });
+  };
   return (
-    <Arrow>
+    <Arrow
+    onClick={() => scrollToSection()}
+    >
       <svg
         xmlns="http://www.w3.org/2000/svg"
         width="69.012"
