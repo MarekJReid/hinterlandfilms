@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components';
 import BouncingArrow from '../Bouncing Arrow/BouncingArrow'
 import Renderer from '../rich-text-renderers/sample'
-import { Heading1, Heading2 } from '../StyledComponents/typography.css'
+import { Heading1, Heading2 } from '../StyledComponents/typography.css.js'
 
 const HeroSeeMore = ({introduction, heading}) => {
   return (
