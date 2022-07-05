@@ -12,11 +12,11 @@ import styled from "styled-components"
 const ContactInfo = ({ contactText, yes }) => {
     const right = useSpring({
         config: { duration: 1000, },
-        from: { opacity: 0, transform: `translateX(50vw)` },
+        from: { opacity: 0, transform: `translateY(50vw)` },
         to: {
           opacity: 1,
     
-          transform: yes === false ? `translateX(50vw)` : `translateX(0)`,
+          transform: yes === false ? `translateY(50vw)` : `translateY(0)`,
         },
        
       })
