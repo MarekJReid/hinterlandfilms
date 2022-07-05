@@ -12,7 +12,7 @@ const GlobalStyles = createGlobalStyle`
     font-size: 16px;
     font-family: 'CentraNo2', sans-serif;
     background:  var(--color-primary);
-  
+    //overflow: hidden;
   }
   a {
     color: #333333;

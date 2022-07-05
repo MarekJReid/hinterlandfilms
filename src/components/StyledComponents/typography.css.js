@@ -47,16 +47,7 @@ export const Typography = createGlobalStyle`
 `
 export const Heading1 = styled.h1`
   font-family: Lumberjack;
-  color:${props => {
-    switch (props.color) {
-      case "white":
-        return "white"
-      case "xs":
-        return ".25rem"
-      default:
-        return "var( --color-light-brown)"
-    }
-  }};
+  color:white !important;
   font-size: 2rem;
   font-weight: 500;
   line-height: 1.14;

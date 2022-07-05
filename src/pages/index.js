@@ -3,16 +3,15 @@ import { graphql } from "gatsby"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 
-
-
 import HeroVideo from "../components/HeroVideo/HeroVideo"
 import HeroSeeMore from "../components/HeroSeeMore/HeroSeeMore"
 import ContactSection from "../components/ContactSection/ContactSection"
+import EnvironmentInfo from "../components/EnvironmentSection/EnvironmentSection"
 
 const IndexPage = ({ data }) => {
   const [contactTop, setContactTop] = React.useState()
 
-  const { heading, heroMedia, introduction, profilePhoto, contactText } =
+  const { heading, heroMedia, introduction, profilePhoto, contactText, environmentText, environmentImage } =
     data.allContentfulLandingPageContent.edges[0].node
   const [scrollToPos, setScrollToPos] = useState(0)
   const contactDiv = useRef()
@@ -34,6 +33,7 @@ const IndexPage = ({ data }) => {
         introduction={introduction}
         scrollToPos={scrollToPos}
       />
+      <EnvironmentInfo environmentImage={environmentImage} environmentText={environmentText} />
       <div ref={contactDiv}>
         <ContactSection profilePhoto={profilePhoto} contactText={contactText} />
       </div>
@@ -62,6 +62,13 @@ export const query = graphql`
             raw
           }
           profilePhoto {
+            title
+            gatsbyImageData(placeholder: BLURRED, layout: FULL_WIDTH)
+          }
+          environmentText {
+            raw
+          }
+          environmentImage {
             title
             gatsbyImageData(placeholder: BLURRED, layout: FULL_WIDTH)
           }

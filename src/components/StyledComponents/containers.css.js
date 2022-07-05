@@ -5,6 +5,26 @@ import { marginBottom } from './variables'
 export const PageContainer = styled.div`
 width: 100%;
 height: 100vh;
+position: ${props => props.absolute ? 'absolute' : null};
+top: 0;
+background-color:
+${props => {
+  switch (props.background) {
+    case "blue":
+      return "var( --color-light-brown)"
+    case "md":
+      return "1.5rem"
+    case "lg":
+      return "3.75rem"
+    case "xl":
+      return "8rem"
+    case "xxl":
+      return "100%"
+    default:
+      return ""
+  }
+}};
+;
 h1 {
   color: grey;
 }
@@ -51,10 +71,12 @@ flex-direction: column;
 
 export const SectionContainer = styled.div`
 display: flex;
-justify-content: flex-end;
+justify-content: center;
+align-items: center;
 flex-direction: ${ props => props.fd ? props.fd : 'column'};
 
 width: ${ props => props.width ? props.width : '100%'};
+height: ${ props => props.width ? props.width : '100%'};
 // padding: ${props => props.overflow === "true" ? '0 3.55rem' : props.full ? '0 3.75rem  0 2.35rem ' : '0 4rem 0 3.5rem'};
 background: ${props => props.background ? props.background : ''};
 
@@ -249,4 +271,9 @@ export const ItemImg = styled.div`
 export const FullImageContainer = styled.div`
   display: inline;
   width: 100%;
+`;
+
+export const TypewritterContainer = styled.div`
+  height: 2rem;
+  width: 12vw;
 `;

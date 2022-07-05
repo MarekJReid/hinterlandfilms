@@ -11,14 +11,14 @@ import ContactForm from "./ContactForm"
 import styled from "styled-components"
 const ContactInfo = ({ contactText, yes }) => {
     const right = useSpring({
-        config: { duration: 1000, },
-        from: { opacity: 0, transform: `translateX(50vw)` },
+        config: { duration: 500, },
+        from: { opacity: 0, transform: `translateX(200px)` },
         to: {
           opacity: 1,
     
-          transform: yes === false ? `translateX(50vw)` : `translateX(0)`,
+          transform: yes === false ? `translateX(200px)` : `translateX(0)`,
         },
-       
+        delay: 150 
       })
   console.log("headerStyle")
   return (

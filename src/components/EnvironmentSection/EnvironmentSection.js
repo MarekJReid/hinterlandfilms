@@ -1,9 +1,10 @@
 import React, { useEffect, useRef, useState } from "react"
 import { SectionContainer } from "../StyledComponents/containers.css"
 import styled from "styled-components"
-import Portrait from "./Portrait"
-import ContactInfo from "./ContactInfo"
-const ContactSection = ({ profilePhoto, contactText }) => {
+import Portrait from "./Image"
+import EnvironmentInfoSection from "./EnvironmentInfoSection"
+
+const EnvironmentInfo = ({ environmentImage, environmentText }) => {
   const triggerRef = useRef()
   const dataRef = useIntersectionObserver(triggerRef, {
     freezeOnceVisible: false,
@@ -44,16 +45,17 @@ const ContactSection = ({ profilePhoto, contactText }) => {
         height: "100vh",
         position: "relative",
         zIndex: "2",
-        marginTop: "150px",
+        marginTop: "400px",
         overflow: `hidden`,
       }}
       fd="row"
     >
-      <Portrait profilePhoto={profilePhoto} yes={dataRef?.isIntersecting} />
-      <ContactInfo contactText={contactText} yes={dataRef?.isIntersecting} />
+      
+      <EnvironmentInfoSection  environmentText={environmentText} yes={dataRef?.isIntersecting} />
+      <Portrait environmentImage={environmentImage} yes={dataRef?.isIntersecting} />
       <div ref={triggerRef} style={{ marginTop: `200px` }} />
     </SectionContainer>
   )
 }
 
-export default ContactSection
+export default EnvironmentInfo
